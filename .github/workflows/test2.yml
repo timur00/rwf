@@ -1,4 +1,4 @@
-name: gitea-actions
+name: Github-called-actions
 run-name: ${{ github.actor }} is hero
 on:
   workflow_call:
@@ -8,8 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-#      - uses: actions/setup-node@v4
-#        with:
-#          node-version: '14'
-#      - run: npm install -g bats
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '14'
+      - run: npm install -g bats
       - run: zip -v
+      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+

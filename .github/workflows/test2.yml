@@ -1,5 +1,5 @@
 name: Github-called-actions
-run-name: ${{ github.actor }} is hero
+run-name: ${{ github.actor }} is testing called github workflow
 on:
   workflow_call:
 

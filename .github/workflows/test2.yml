@@ -19,4 +19,4 @@ jobs:
           ls ${{ github.workspace }}
       - run: rm -r README.md
       - run: |
-          ls /home/runner/work/gitea'
+          ls /home/runner/work/gitea

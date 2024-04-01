@@ -18,6 +18,8 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: rm -r README.md
+      - run: echo 1.txt
+      - run: touch 2.txt
       - run: |
           ls /home/runner/work
           ls /home/runner/
